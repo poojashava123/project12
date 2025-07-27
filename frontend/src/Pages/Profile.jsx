@@ -18,6 +18,7 @@ export default function Profile() {
     }, [])// [] , 
 
   return (
+    <container size={"sm"}>
      <Stack
       h={300}
       bg="var(--mantine-color-body)"
@@ -25,12 +26,14 @@ export default function Profile() {
       justify="center"
       gap="md"
     >
-    <div>
     
-      <Avatar src={profileData?.avatar} alt="it's me"/>
-      <Text tt="uppercase">{profileData?.name}</Text>
-      <Text tt="uppercase">{profileData?.email}</Text>
-    </div>
+      <Avatar radius="xl" size="xl"src={profileData?.avatar} alt="it's me"/>
+      
+      <Text tt="uppercase"><strong>UserName:</strong>{profileData?.name}</Text>
+      <Text tt="uppercase"><strong>Email:</strong>{profileData?.email}</Text>
+      
+
     </Stack>
+    </container>
   )
 }
